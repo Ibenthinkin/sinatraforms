@@ -1,0 +1,10 @@
+<a href="/jellybeans/new">Create a Jellybean</a>
+
+<ul>
+  <!-- for each jellybean in my DB, print out the name -->
+  <% @jellybeans.each do |jellybean| %>
+
+    <li><%= jellybean.label %></li>
+
+  <% end %>
+</ul>

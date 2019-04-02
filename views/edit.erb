@@ -1,0 +1,27 @@
+<form action="/jellybeans/<%= @jellybean.id %>" method="post">
+  <!-- send a patch request -->
+  <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Flavor
+    <input type="text" name="jellybean[flavor]" value="<%= @jellybean.flavor %>">
+  </label>
+
+  <label>
+    Label
+    <input type="text" name="jellybean[label]" value="<%= @jellybean.label %>">
+  </label>
+
+  <label>
+    Popularity
+    <input type="number" name="jellybean[popularity]" value="<%= @jellybean.popularity %>">
+  </label>
+
+  <input type="submit" value="Add Jellybean">
+</form>
+
+<form action="/jellybeans/<%= @jellybean.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete jellybean">
+</form>
